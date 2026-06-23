@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sum of N Numbers</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        .container {
+            width: 350px;
+            margin: auto;
+            padding: 25px;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            color: #4a4a4a;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #666;
+            font-size: 14px;
+        }
+
+        input {
+            padding: 10px;
+            width: 80%;
+            border: 2px solid #667eea;
+            border-radius: 8px;
+            font-size: 16px;
+            outline: none;
+            margin: 10px 0;
+        }
+
+        input:focus {
+            border-color: #764ba2;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: linear-gradient(135deg, #ff6a00, #ee0979);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(238, 9, 121, 0.4);
+        }
+
+        h3 {
+            margin-top: 20px;
+            color: #667eea;
+            font-size: 22px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Sum of N Numbers</h2>
+
+        <p>Enter a number to calculate the sum from 1 to N</p>
+
+        <input type="number" id="num" placeholder="Enter N">
+        <br>
+
+        <button onclick="calculateSum()">Calculate</button>
+
+        <h3 id="result"></h3>
+    </div>
+
+    <script>
+        function calculateSum() {
+            let n = parseInt(document.getElementById("num").value);
+
+            let sum = 0;
+
+            for (let i = 1; i <= n; i++) {
+                sum += i;
+            }
+
+            document.getElementById("result").innerHTML = "Sum = " + sum;
+        }
+    </script>
+
+</body>
+</html>
